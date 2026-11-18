@@ -1,10 +1,9 @@
-import Header from './components/Header'
-import Randomizer from './components/Randomizer'
+import Randomizer from './components/general-randomizer/Randomizer'
 
 export default function Home() {
   return (
     <>
-      <Header />
+      <h2 className = 'font-[400] font-prompt text-2xl text-center'>What are we watching today?</h2>
 
       <Randomizer />
     </>
