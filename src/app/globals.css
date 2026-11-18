@@ -1,1 +1,19 @@
-@import "tailwindcss";
+@import 'tailwindcss';
+
+@theme {
+  --color-brand: #f62440;
+  --color-cream-100: #fff2db;
+  --color-cream-200: #ffe5bf;
+  --color-cream-50: #fffaf3;
+  --color-ink: #332a27;
+
+  --color-border: var(--color-cream-200);
+  --color-canvas: var(--color-cream-50);
+  --color-primary: var(--color-brand);
+  --color-surface-soft: var(--color-cream-100);
+  --color-text: var(--color-ink);
+
+  --font-body: var(--manrope);
+  --font-display: var(--newsreader);
+  --font-prompt: var(--outfit)
+}
