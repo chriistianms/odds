@@ -1,4 +1,4 @@
-import Randomizer from './components/general-randomizer/Randomizer'
+import Randomizer from './components/landing-randomizer/Randomizer'
 
 export default function Home() {
   return (
