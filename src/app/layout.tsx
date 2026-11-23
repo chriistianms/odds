@@ -20,9 +20,9 @@ export default function RootLayout({ children }: LayoutProps<'/'>) {
       className = {fonts.map((font) => font.variable).join(' ')}
       lang = 'en'
     >
-      <body className = 'bg-canvas flex flex-col font-body gap-2 min-h-screen text-ink'>
+      <body className = 'bg-sugar-milk flex flex-col font-body gap-4 items-center justify-start min-h-screen text-industrial-black'>
         <Header />
-        <main className = 'flex flex-col gap-2 px-4'>
+        <main className = 'flex flex-col gap-4 items-center justify-start px-4 w-full'>
           {children}
         </main>
       </body>
