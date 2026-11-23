@@ -1,16 +1,22 @@
+import Image from 'next/image'
 import Link from 'next/link'
+import brand from '../../../public/brand.webp'
 
 export default function Header() {
   return (
-    <header className = 'flex items-center justify-center p-4 pb-2 relative text-primary'>
+    <header className = 'flex flex-col gap-4 items-center justify-center p-4 pb-0 w-full'>
       <Link
-        className = 'font-bold font-display italic text-4xl text-center'
+        className = 'active:scale-x-115 active:scale-y-85 duration-100 transition'
         href = '/'
       >
-        odds
+        <Image
+          alt = 'odds'
+          className = 'h-10 w-auto'
+          src = {brand}
+        />
       </Link>
 
-      <div className = 'absolute bg-border bottom-0 h-[2px] left-4 right-4' />
+      <div className = 'bg-cheese-powder h-[2px] shadow-[0_2px_3px_0_var(--color-cheese-powder)] w-full' />
     </header>
   )
 }
