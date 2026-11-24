@@ -1,5 +1,3 @@
-'use client'
-
 import { IconDice5 } from '@tabler/icons-react'
 import { useFormStatus } from 'react-dom'
 
@@ -14,20 +12,14 @@ export default function SubmitButton() {
     >
       <div className = 'flex items-center justify-center text-sugar-milk'>
         <IconDice5
-          className = {`shrink-0 transition-transform duration-300 ${pending ? 'animate-spin' : ''}`}
-          size = '25'
+          className = {`${pending ? 'animate-spin' : ''} duration-300 shrink-0 transition-transform`}
+          size = {25}
         />
         <div
-          className = {`grid transition-all duration-300 ease-in-out ${
-            pending
-              ? 'grid-cols-[0fr] opacity-0'
-              : 'grid-cols-[1fr] pl-2 opacity-100'
-          }`}
+          className = {`${pending ? 'grid-cols-[0fr] opacity-0' : 'grid-cols-[1fr] pl-2 opacity-100'} duration-300 ease-in-out grid transition-all`}
         >
           <span
-            className = {`font-bold font-prompt overflow-hidden text-lg tracking-wider transition-transform duration-300 ease-in-out uppercase whitespace-nowrap ${
-              pending ? 'translate-x-4' : 'translate-x-0'
-            }`}
+            className = {`${pending ? 'translate-x-4' : 'translate-x-0'} duration-300 ease-in-out font-bold font-outfit overflow-hidden text-lg tracking-wider transition-transform uppercase whitespace-nowrap`}
           >
             spin the reel
           </span>
