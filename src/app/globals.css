@@ -1,6 +1,18 @@
 @import 'tailwindcss';
 
+@keyframes selector-pill-enter {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
 @theme {
+  --animate-selector-pill-enter: selector-pill-enter 100ms;
+
   --color-almeja: #f5e1ca;
   --color-bara-red: #e95a6d;
   --color-barley-corn: #b89259;

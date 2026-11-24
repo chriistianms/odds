@@ -16,10 +16,10 @@ export default function SubmitButton() {
           size = {25}
         />
         <div
-          className = {`${pending ? 'grid-cols-[0fr] opacity-0' : 'grid-cols-[1fr] pl-2 opacity-100'} duration-300 ease-in-out grid transition-all`}
+          className = {`duration-300 ease-in-out grid ${pending ? 'grid-cols-[0fr] opacity-0' : 'grid-cols-[1fr] pl-2 opacity-100'} transition-all`}
         >
           <span
-            className = {`${pending ? 'translate-x-4' : 'translate-x-0'} duration-300 ease-in-out font-bold font-outfit overflow-hidden text-lg tracking-wider transition-transform uppercase whitespace-nowrap`}
+            className = {`duration-300 ease-in-out font-bold font-outfit overflow-hidden text-lg tracking-wider transition-transform ${pending ? 'translate-x-4' : 'translate-x-0'} uppercase whitespace-nowrap`}
           >
             spin the reel
           </span>
