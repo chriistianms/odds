@@ -3,7 +3,11 @@ import Randomizer from './components/landing-randomizer/Randomizer'
 export default function Home() {
   return (
     <>
-      <h2 className = 'font-[400] font-prompt text-2xl text-center'>What are we watching today?</h2>
+      <div className = 'flex flex-col gap-1 items-center justify-center mb-2'>
+        <h2 className = 'font-medium font-outfit text-2xl text-center'>What are we watching today?</h2>
+
+        <h3 className = 'font-extrabold text-caribbean-coral text-xs tracking-widest uppercase'>let the odds decide</h3>
+      </div>
 
       <Randomizer />
     </>

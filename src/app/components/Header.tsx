@@ -6,12 +6,13 @@ export default function Header() {
   return (
     <header className = 'flex flex-col gap-4 items-center justify-center p-4 pb-0 w-full'>
       <Link
-        className = 'active:scale-x-115 active:scale-y-85 duration-100 transition'
+        className = 'active:scale-x-115 active:scale-y-85 duration-100 transition-transform'
         href = '/'
       >
         <Image
           alt = 'odds'
           className = 'h-10 w-auto'
+          loading = 'eager'
           src = {brand}
         />
       </Link>
