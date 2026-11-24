@@ -8,10 +8,27 @@ if (!tmdbApiKey) {
   throw new Error('tmdb api key is not defined in the environment variables.')
 }
 
-export async function redirectToSelectedMedia() {
-  const mediaType = Math.random() < 0.5 ? 'movie' : 'tv'
-  const randomPage = Math.floor(Math.random() * 500) + 1
+export async function redirectToSelectedMedia(formData: FormData) {
   const tmdbBaseUrl = 'https://api.themoviedb.org/3'
+
+  const userSelectedMediaType = formData.get('mediaType')
+  let mediaType
+
+  switch (userSelectedMediaType) {
+    case 'movie':
+      mediaType = 'movie'
+      break
+
+    case 'tv':
+      mediaType = 'tv'
+      break
+
+    default:
+      const randomMediaType = Math.random() < 0.5 ? 'movie' : 'tv'
+      mediaType = randomMediaType
+  }
+
+  const randomPage = Math.floor(Math.random() * 500) + 1
 
   const errorMessageMediaType = mediaType === 'movie' ? 'movies' : 'tv shows'
 
