@@ -1,8 +1,6 @@
 import { IconDeviceTvOld, IconMovie, IconSparkles2 } from '@tabler/icons-react'
-import { useFormStatus } from 'react-dom'
 
 export default function Spinner() {
-  const { pending } = useFormStatus()
   const icons = [IconDeviceTvOld, IconMovie, IconSparkles2]
 
   return (
@@ -13,7 +11,9 @@ export default function Spinner() {
 
       <div className = 'bg-lotion border border-blank-canvas flex h-[180px] items-center justify-center p-4 rounded-3xl w-full'>
         <div className = 'bg-fatback border-2 border-almeja h-[140px] p-1 rounded-2xl w-full'>
-          
+          <div className = 'divide-almeja divide-x-2 grid grid-cols-3 place-items-center'>
+            
+          </div>
         </div>
       </div>
     </div>

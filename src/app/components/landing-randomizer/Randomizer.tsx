@@ -1,7 +1,7 @@
 'use client'
 
 import MediaTypeSelector from './MediaTypeSelector'
-import Spinner from './Spinner'
+// import Spinner from './Spinner'
 import SubmitButton from './SubmitButton'
 import { redirectToSelectedMedia } from '../../actions'
 
@@ -13,7 +13,7 @@ export default function Randomizer() {
     >
       <MediaTypeSelector />
 
-      <Spinner />
+      {/* <Spinner /> */}
 
       <SubmitButton />
     </form>
