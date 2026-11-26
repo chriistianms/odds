@@ -3,12 +3,12 @@
 import MediaTypeSelector from './MediaTypeSelector'
 // import Spinner from './Spinner'
 import SubmitButton from './SubmitButton'
-import { redirectToSelectedMedia } from '../../actions'
+import { redirectToRandomMedia } from '../../actions/randomizer'
 
 export default function Randomizer() {
   return (
     <form
-      action = {redirectToSelectedMedia}
+      action = {redirectToRandomMedia}
       className = 'flex flex-col gap-4 items-center justify-start w-full'
     >
       <MediaTypeSelector />
