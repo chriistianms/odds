@@ -1,7 +1,8 @@
+import InvalidMediaId from '@/app/components/media/InvalidMediaId'
 import InvalidMediaType from '@/app/components/media/InvalidMediaType'
 import MediaDetails from '@/app/components/media/MediaDetails'
-import type { MediaType } from '@/lib/tmdb/media'
 import { Suspense } from 'react'
+import { checkMediaExistance, type MediaType } from '@/lib/tmdb/media'
 
 interface PageProps {
   params: Promise<{
@@ -19,6 +20,10 @@ async function MediaPageContent({ params }: PageProps) {
 
   if (!isMediaType(mediaType)) {
     return <InvalidMediaType mediaType = {mediaType} />
+  }
+
+  if (!(await checkMediaExistance({ id, mediaType }))) {
+    return <InvalidMediaId id = {id} mediaType = {mediaType} />
   }
 
   return <MediaDetails id = {id} mediaType = {mediaType} />

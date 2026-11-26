@@ -4,6 +4,6 @@ type InvalidMediaTypeProps = {
 
 export default function InvalidMediaType(mediaType: InvalidMediaTypeProps) {
   return (
-    <h1>bad</h1>
+    <h1>wrong media type</h1>
   )
 }

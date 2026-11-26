@@ -1,7 +1,7 @@
-import { IconDeviceTvOld, IconMovie, IconSparkles2 } from '@tabler/icons-react'
+// import { IconDeviceTvOld, IconMovie, IconSparkles2 } from '@tabler/icons-react'
 
 export default function Spinner() {
-  const icons = [IconDeviceTvOld, IconMovie, IconSparkles2]
+  // const icons = [IconDeviceTvOld, IconMovie, IconSparkles2]
 
   return (
     <div className = 'bg-linear-to-b border-4 border-cornmeal flex from-bridal-heath items-center justify-center p-2 relative rounded-4xl to-soft-pillow w-[90%]'>

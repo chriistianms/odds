@@ -7,6 +7,6 @@ type MediaDetailsProps = {
 
 export default function MediaDetails({ id, mediaType }: MediaDetailsProps) {
   return (
-    <h1>good</h1>
+    <h1>correct id & media type</h1>
   )
 }
