@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import Link from 'next/link'
-import brand from '../../../public/brand.webp'
+import brand from '@/public/brand.webp'
 
 export default function Header() {
   return (

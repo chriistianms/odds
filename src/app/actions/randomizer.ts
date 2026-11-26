@@ -1,6 +1,6 @@
 'use server'
 
-import { discoverMedia, type MediaType } from '../../lib/tmdb/media'
+import { discoverMedia, type MediaType } from '@/lib/tmdb/media'
 import { redirect } from 'next/navigation'
 
 export async function redirectToRandomMedia(formData: FormData) {
