@@ -1,26 +1,33 @@
+import InvalidMediaType from '@/app/components/media/InvalidMediaType'
+import MediaDetails from '@/app/components/media/MediaDetails'
+import type { MediaType } from '@/lib/tmdb/media'
 import { Suspense } from 'react'
 
-interface Params {
+interface PageProps {
   params: Promise<{
-    mediaType: string
     id: string
+    mediaType: string
   }>
 }
 
-async function MediaDetails({ params }: Params) {
-  const { mediaType, id } = await params
-
-  return (
-    <>
-      <h1>{id} - {mediaType}</h1>
-    </>
-  )
+function isMediaType(value: string): value is MediaType {
+  return value === 'movie' || value === 'tv'
 }
 
-export default function Page({ params }: Params) {
+async function MediaPageContent({ params }: PageProps) {
+  const { id, mediaType } = await params
+
+  if (!isMediaType(mediaType)) {
+    return <InvalidMediaType mediaType = {mediaType} />
+  }
+
+  return <MediaDetails id = {id} mediaType = {mediaType} />
+}
+
+export default function Page({ params }: PageProps) {
   return (
     <Suspense fallback = {<p>loading details...</p>}>
-      <MediaDetails params = {params} />
+      <MediaPageContent params = {params} />
     </Suspense>
   )
 }
