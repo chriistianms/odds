@@ -22,8 +22,8 @@ async function MediaPageContent({ params }: PageProps) {
     return <InvalidMediaType mediaType = {mediaType} />
   }
 
-  if (!(await checkMediaExistance({ id, mediaType }))) {
-    return <InvalidMediaId id = {id} mediaType = {mediaType} />
+  if (!await checkMediaExistance({ id, mediaType })) {
+    return <InvalidMediaId id = {id} />
   }
 
   return <MediaDetails id = {id} mediaType = {mediaType} />

@@ -1,12 +1,9 @@
-import type { MediaType } from '@/lib/tmdb/media'
-
 type InvalidMediaIdProps = {
   id: string
-  mediaType: MediaType
 }
 
-export default function InvalidMediaId(mediaType: InvalidMediaIdProps) {
+export default function InvalidMediaId({ id }: InvalidMediaIdProps) {
   return (
-    <h1>wrong id</h1>
+    <h1 className = 'text-center'>you tried visiting an invalid id ({id})</h1>
   )
 }
